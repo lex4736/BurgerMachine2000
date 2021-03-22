@@ -1,47 +1,67 @@
-<div class="jumbotron text-center">
-<h1>EAT-THE-BURGER</h1>
-<img src="/assets/img/avoburger.png" alt="burger" class="align-center">
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Burger Designer</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
 
+</head>
 
-<div class="row burger-cards">
-    <div class="col-sm-12 col-md-6 col-lg-6 to-eat-card">
-        <h2>Ready-to-eat burgers!</h2>
+<body>
+  <div id="welcomebox">
+    <div>
+      <h1 class="display-4">Eat-da-Burger Machine 2000 </h1>
+      <img src="/assets/img/burger.png" alt="burger" class="img01">
+      <br>
+ Eat-da-Burger Machine 2000 is the latest innovation in the fast food industry. Our new tech can make any burger you desire at . Simply type your desired burger in the order box and let it work it's magic. We gaurantee that our burger machine can deliver your burger as quickly as you can press that order button or your money back! 
+<br><br>
+<h2><img src="/assets/img/burger01.png" alt="burger" class="img02"> Order your burger.</h2>    
+
+<p></p><h3>ORDER BOX</h3>
+<form class="create-form">
+<input class="col-xl-3 col-lg-4 col-md-5 col-sm-12 col-xs-12" type="text" id="burger-input" name="name" placeholder="Type order here">
+<br><br>
+<button id="addBtn" type="submit" class="button">PLACE ORDER</button>
+</form>
+  
+<hr>
+<h2><img src="/assets/img/burger01.png" alt="burger" class="img02"> Your Order is Ready.</h2>
+<span class="text"> Select the burger you want to eat </span>
+  <br> 
+    
             <ul id= "burger-list">
                 {{#each burgers}}
                 {{#unless this.devoured}}
-                    <div class="burgers-toEat ">
+                    <p class="burgers-toEat ">
                         <form class="update col-xl-9 col-lg-11 col-md-12 col-sm-12 card-body">
                 {{this.id}}. {{this.burger_name}}
-                            <button type="submit" data-id="{{this.id}}" class="devour-btn">DEVOUR</button>
+                            <button type="submit" data-id="{{this.id}}" class="devour-btn" id="devour">EAT THIS BURGER</button>
                         </form>
-                    </div>
                 {{/unless}}
                 {{/each}}
             </ul>
-    </div>
-
-
-        <div class="devoured-section col-sm-12 col-md-6 col-lg-6">
-            <h2>Devoured Burgers!</h2>
-        <ul id="devoured-list">
+<hr>
+   <p class="devoured-section"> 
+    <h2> <img src="/assets/img/burger01.png" alt="burger" class="img02"> Order History</h2>
+    <br>
+    Thank you for using our Burger Machine. We have stored your order history incase you want to order it again. Hope to see you back soon! 
+        <p id="devoured-list">
             {{#each burgers}}
             {{#if this.devoured}}
-                <div class="devoured-burgers">
+            <p class="devoured-burgers">
             {{this.id}}. {{this.burger_name}}
-                </div>
             {{/if}}
-            {{/each}}
-        </ul>
-    </div>
-</div>
+            {{/each}} 
+        </p>
 
-<div>
-<form class="create-form">
-    <div class="form-group">
-        <input class="col-xl-3 col-lg-4 col-md-5 col-sm-12 col-xs-12" type="text" id="burger-input" name="name" placeholder="Enter a burger to eat!">
-    </div>
-    <button id="addBtn" type="submit">SUBMIT</button>
-</form>
-</div>
+  </div>
+  <script src="/assets/js/index.js"></script>
+</body>
+
+</html>
+

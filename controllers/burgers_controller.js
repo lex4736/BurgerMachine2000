@@ -1,11 +1,12 @@
+// Setting up express 
 const express = require('express');
 
 const router = express.Router();
 
-// Import the model (cat.js) to use its database functions.
+// Importing the model  to use its database functions.
 const burger = require('../models/burger.js');
 
-// Create all our routes and set up logic within those routes where required.
+// Create all our routes and setting up logic within those routes where required.
 router.get('/', (req, res) => {
     burger.all((data) => {
     const hbsObject = {
@@ -30,17 +31,27 @@ router.put('/api/burgers/:id', (req, res) => {
   console.log(array);
 
   burger.update(
-  array,
-
-    (result) => {
+  array,(result) => {
       if (result.changedRows === 0) {
-        // If no rows were changed, then the ID must not exist, so 404
         return res.status(404).end();
       }
       res.status(200).end();
     }
   );
 });
+
+// FUTURE DEVELOPMENT: Attempted to add a delete fuctionality to the history list but was causing errors to my working application so i ended up reverting back to an old save but will continue on getting this feature to work
+// router.delete('/api/burgers/:id', (req, res) => {
+//   const array = `id = ${req.params.id}`;
+
+//   burger.delete(array, (result) => {
+//     if (result.affectedRows === 0) {
+//       return res.status(404).end();
+//     }
+//     res.status(200).end();
+//   });
+// });
+
 
 // Export routes for server.js to use.
 module.exports = router;

@@ -1,0 +1,113 @@
+body {
+  height: auto;
+margin-top: 55px;
+  padding: 0;
+  font-family: cursive;
+  background-color: rgb(212, 103, 0);
+  color: rgb(243, 203, 116);
+}
+h1 {
+  text-shadow: 4px 4px 6px #080808;
+  color: rgb(255, 187, 61);
+  font-size: 50px;
+  font-family: 'Great Vibes', cursive;
+}
+h2 {
+  text-shadow: 2px 2px 4px #080808;
+  color: rgb(247, 151, 43);
+  font-size: 20px;
+  font-family: 'Chango', cursive;
+  text-align: left;
+  padding: 0px;
+}
+h3 {
+  text-shadow: 2px 2px 4px #080808;
+  color: rgb(238, 201, 121);
+  font-size: 20px;
+  font-family: 'Chango', cursive;
+  text-align: center;
+}
+.text {
+ text-align: left;
+}
+#welcomebox {
+  width: 100%;
+  height: auto;
+  background-color: rgb(99, 53, 0);
+  border: black;
+  border-style: double;
+  margin-top: 20px;
+  padding: 20px;
+  align-content: center;
+  border-radius: 15px 50px;
+  text-align: center;
+  padding: 20px;
+}
+.img01 {
+  width: 275px;
+  height: 275px;
+}
+
+.img02 {
+  width: 60px;
+  height: 60px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: inline-block;
+  color: blanchedalmond;
+}
+.button {
+  /* background-color: #e7c567;  */
+  background-color: #fd9737; 
+  border: solid;
+  color: rgb(83, 38, 8);
+  padding: 10px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 11px;
+  transition-duration: 0.8s;
+}
+.button:hover {
+  background-color: #e9c345; 
+  color: rgb(83, 38, 8);
+}
+
+#devour{
+  background-color: #fd9737; 
+  border: solid;
+  color: rgb(83, 38, 8);
+  padding: 10px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 11px;
+  transition-duration: 0.8s;
+  border-radius: 50%;
+}
+#burger-list {
+  color: lightgoldenrodyellow;
+}
+.devoured-burgers {
+  color: lightgoldenrodyellow;
+}
+#burger-input{
+  background-color: rgb(238, 167, 102);
+  border: solid;
+  color: rgb(83, 38, 8);
+  font-size: 20px;
+  text-align: center;
+  height: 90px;
+  
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(85, 39, 8, 0.719);
+  opacity: 1; /* Firefox */
+  font-size: 12px;
+  text-align: center;
+}
