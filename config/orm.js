@@ -23,7 +23,7 @@ const orm = {
       updateOne(tableInput, array, cb) {
         console.log(array); 
         const queryString = `UPDATE ${tableInput} SET ? WHERE ?`;
-        // write an array an object 
+        
      
 
         connection.query(queryString, array, (err, result) => {
