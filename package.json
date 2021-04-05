@@ -4,7 +4,8 @@
   "description": "A burger maker machine",
   "main": "node server.js",
   "scripts": {
- "start": "node server.js" 
+ "start": "node server.js",
+ "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "mysql": "^2.18.1"
-  }
+  },
   "engines": {
     "node": "15.4.0"
 }
