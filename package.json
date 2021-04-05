@@ -22,8 +22,5 @@
     "express-handlebars": "^5.2.0",
     "mysql": "^2.18.1"
   }
-  "engines": {
-    "node": "15.4.0"
-  }
     
 }
