@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const exphbs = require("express-handlebars");
 const PORT = process.env.PORT || "8080";
-const routes = require('./controllers/burgers_controller.js');
+const routes = require('./controllers/burgers_controller');
 
 // This bit of code tells express where my static files are and how to show them 
 app.use(express.static('public'));
