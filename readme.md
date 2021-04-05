@@ -26,7 +26,7 @@ Allows users to write new burger data, deveour/remove burger data and save burge
 
 ----
 ## 🍔 <a id="contributors"></a>Contributors 
-My nephews for making me watch spongebob and ultimately gave me the idea to incorporate a burger making machine application 
+My nephews for making me watch spongebob which ultimately gave me the idea to incorporate a burger making machine application to this project
 
 ---- 
 ## 🍔 <a id="test"></a> How to test 
