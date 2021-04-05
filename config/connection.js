@@ -1,12 +1,12 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-  host: 'localhost',
+  host: 'us-cdbr-east-03.cleardb.com',
   port: 3306,
-  user: 'root',
+  user: 'b976710c726714:f079a062',
   // NOTE: Be sure to add your MySQL password here!
-  password: 'password',
-  database: 'burgers_db',
+  password: 'f079a062',
+  database: 'heroku_70d751653b4b5f9',
 });
 
 // Make connection.
