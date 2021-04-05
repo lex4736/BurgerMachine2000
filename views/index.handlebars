@@ -18,7 +18,8 @@
       <h1 class="display-4">Eat-da-Burger Machine 2000 </h1>
       <img src="/assets/img/burger.png" alt="burger" class="img01">
       <br>
- Eat-da-Burger Machine 2000 is the latest innovation in the fast food industry. Our new tech can make any burger you desire at . Simply type your desired burger in the order box and let it work it's magic. We gaurantee that our burger machine can deliver your burger as quickly as you can press that order button or your money back! 
+ Eat-da-Burger Machine 2000 is the latest innovation in the fast food industry. Our new tech can make any burger you desire
+ Simply type your desired burger in the order box and let it work it's magic. We gaurantee that our burger machine can deliver your burger as quickly as you can press that order button or your money back! 
 <br><br>
 <h2><img src="/assets/img/burger01.png" alt="burger" class="img02"> Order your burger.</h2>    
 
@@ -51,16 +52,17 @@
    <p class="devoured-section"> 
     <h2> <img src="/assets/img/burger01.png" alt="burger" class="img02"> Order History</h2>
     <br>
-    Thank you for using our Burger Machine. We will save your order history here incase you want to order it again. Hope to see you back soon! 
+    Thank you for using our Burger Machine. We have saved your receipts/order history below showing your order number and the name of the burger you ordered incase you want to order it again. We hope you enjoyed your burger. Come back soon! 
         <p id="devoured-list">
             {{#each burgers}}
             {{#if this.devoured}}
-            <p class="devoured-burgers">
+            <p class="devoured-burgers" id="history">
+             <img src="/assets/img/receipt.png" class="imgb"> <br>
             {{this.id}}. {{this.burger_name}}
             {{/if}}
             {{/each}} 
         </p>
-
+<br><br> 
   </div>
   <script src="/assets/js/index.js"></script>
 </body>
