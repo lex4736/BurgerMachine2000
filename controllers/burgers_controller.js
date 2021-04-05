@@ -8,30 +8,34 @@ const burger = require('../models/burger.js');
 
 // Create all our routes and setting up logic within those routes where required.
 router.get('/', (req, res) => {
-    burger.all((data) => {
+  burger.all((data) => {
     const hbsObject = {
-        burgers: data,
+      burgers: data,
     };
     console.log(hbsObject);
     res.render('index', hbsObject);
-    });
+  });
 });
 
 router.post('/api/burgers', (req, res) => {
-    burger.create(req.body, (result) => {
+  burger.create(req.body, (result) => {
     // Send back the ID of the new quote
-    res.json({ id: result.insertId });
+    res.json({
+      id: result.insertId
     });
+  });
 });
 
 router.put('/api/burgers/:id', (req, res) => {
- const array = [
-   {devoured: req.body.devoured}, {id: parseInt(req.params.id)}
- ]
+  const array = [{
+    devoured: req.body.devoured
+  }, {
+    id: parseInt(req.params.id)
+  }]
   console.log(array);
 
   burger.update(
-  array,(result) => {
+    array, (result) => {
       if (result.changedRows === 0) {
         return res.status(404).end();
       }

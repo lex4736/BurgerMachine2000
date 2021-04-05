@@ -18,54 +18,60 @@
       <h1 class="display-4">Eat-da-Burger Machine 2000 </h1>
       <img src="/assets/img/burger.png" alt="burger" class="img01">
       <br>
- Eat-da-Burger Machine 2000 is the latest innovation in the fast food industry. Our new tech can make any burger you desire
- Simply type your desired burger in the order box and let it work it's magic. We gaurantee that our burger machine can deliver your burger as quickly as you can press that order button or your money back! 
-<br><br>
-<h2><img src="/assets/img/burger01.png" alt="burger" class="img02"> Order your burger.</h2>    
+      Eat-da-Burger Machine 2000 is the latest innovation in the fast food industry. Our new tech can make any burger
+      you desire
+      Simply type your desired burger in the order box and let it work it's magic. We gaurantee that our burger machine
+      can deliver your burger as quickly as you can press that order button or your money back!
+      <br><br>
+      <h2><img src="/assets/img/burger01.png" alt="burger" class="img02"> Order your burger.</h2>
 
-<p></p><h3>ORDER BOX</h3>
-<br>
-<img src="/assets/img/robot.gif" class="img03">
-<form class="create-form">
-<input class="col-xl-3 col-lg-4 col-md-5 col-sm-12 col-xs-12" type="text" id="burger-input" name="name" placeholder="Hello Human! I am Burger Machine 2000. May I take your order?">
-<br><br>
-<button id="addBtn" type="submit" class="button">PLACE ORDER</button>
-</form>
-  
-<hr>
-<h2><img src="/assets/img/burger01.png" alt="burger" class="img02"> Your Order is Ready.</h2>
-<span class="text"> Select the burger you want to eat by clicking on the order number and name </span>
-  <br> 
-   
-            <ul id= "burger-list">
-                {{#each burgers}}
-                {{#unless this.devoured}}
-                    <p class="burgers-toEat "> 
-                        <form class="update col-xl-9 col-lg-11 col-md-12 col-sm-12 card-body" id="devour">
-                <img src="/assets/img/burger02.png" class="imgb"> <br>
-                            <button type="submit" data-id="{{this.id}}" class="devour-btn"> <b>{{this.id}}. {{this.burger_name}}</b><br>EAT THIS BURGER </button>
-                        </form>
-                {{/unless}}
-                {{/each}}
-            </ul>
-<hr>
-   <p class="devoured-section"> 
-    <h2> <img src="/assets/img/burger01.png" alt="burger" class="img02"> Order History</h2>
-    <br>
-    Thank you for using our Burger Machine. We have saved your receipts/order history below showing your order number and the name of the burger you ordered incase you want to order it again. We hope you enjoyed your burger. Come back soon! 
-        <p id="devoured-list">
-            {{#each burgers}}
-            {{#if this.devoured}}
-            <p class="devoured-burgers" id="history">
-             <img src="/assets/img/receipt.png" class="imgb"> <br>
-            {{this.id}}. {{this.burger_name}}
-            {{/if}}
-            {{/each}} 
-        </p>
-<br><br> 
-  </div>
-  <script src="/assets/js/index.js"></script>
+      <p></p>
+      <h3>ORDER BOX</h3>
+      <br>
+      <img src="/assets/img/robot.gif" class="img03">
+      <form class="create-form">
+        <input class="col-xl-3 col-lg-4 col-md-5 col-sm-12 col-xs-12" type="text" id="burger-input" name="name"
+          placeholder="Hello Human! I am Burger Machine 2000. May I take your order?">
+        <br><br>
+        <button id="addBtn" type="submit" class="button">PLACE ORDER</button>
+      </form>
+
+      <hr>
+      <h2><img src="/assets/img/burger01.png" alt="burger" class="img02"> Your Order is Ready.</h2>
+      <span class="text"> Select the burger you want to eat by clicking on the order number and name </span>
+      <br>
+
+      <ul id="burger-list">
+        {{#each burgers}}
+        {{#unless this.devoured}}
+        <p class="burgers-toEat ">
+        <form class="update col-xl-9 col-lg-11 col-md-12 col-sm-12 card-body" id="devour">
+          <img src="/assets/img/burger02.png" class="imgb"> <br>
+          <button type="submit" data-id="{{this.id}}" class="devour-btn"> <b>{{this.id}}.
+              {{this.burger_name}}</b><br>EAT THIS BURGER </button>
+        </form>
+        {{/unless}}
+        {{/each}}
+      </ul>
+      <hr>
+      <p class="devoured-section">
+      <h2> <img src="/assets/img/burger01.png" alt="burger" class="img02"> Order History</h2>
+      <br>
+      Thank you for using our Burger Machine. We have saved your receipts/order history below showing your order number
+      and the name of the burger you ordered incase you want to order it again. We hope you enjoyed your burger. Come
+      back soon!
+      <p id="devoured-list">
+        {{#each burgers}}
+        {{#if this.devoured}}
+      <p class="devoured-burgers" id="history">
+        <img src="/assets/img/receipt.png" class="imgb"> <br>
+        {{this.id}}. {{this.burger_name}}
+        {{/if}}
+        {{/each}}
+      </p>
+      <br><br>
+    </div>
+    <script src="/assets/js/index.js"></script>
 </body>
 
 </html>
-

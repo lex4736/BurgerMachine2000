@@ -9,11 +9,15 @@ const routes = require('./controllers/burgers_controller.js');
 app.use(express.static('public'));
 
 // This is where i am setting my app to handle URL encoding & Json
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({
+  extended: true
+}));
 app.use(express.json());
 
 // This where i am setting up my templating engine to my handlebars 
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.engine('handlebars', exphbs({
+  defaultLayout: 'main'
+}));
 // This where i am setting up my view engine to my handlebars 
 app.set('view engine', 'handlebars');
 
