@@ -1,8 +1,8 @@
 {
-  "name": "Burgermachine2000",
+  "name": "Burger machine2000",
   "version": "1.0.0",
   "description": "A burger maker machine",
-  "main": "node server.js",
+  "main": "server.js",
   "scripts": {
  "start": "node server.js" 
   },
