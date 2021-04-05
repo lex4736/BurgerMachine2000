@@ -1,12 +1,14 @@
 const mysql = require('mysql');
 
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
 const connection = mysql.createConnection({
-  host: 'us-cdbr-east-03.cleardb.com',
+  host: 'localhost',
   port: 3306,
-  user: 'b976710c726714:f079a062',
-  // NOTE: Be sure to add your MySQL password here!
-  password: 'f079a062',
-  database: 'heroku_70d751653b4b5f9',
+  user: 'root',
+  password: 'password',
+  database: 'burgers_db',
 });
 
 // Make connection.
@@ -20,3 +22,11 @@ connection.connect((err) => {
 
 // Export connection for our ORM to use.
 module.exports = connection;
+
+
+// host: 'us-cdbr-east-03.cleardb.com',
+// port: 3306,
+// user: 'b976710c726714',
+// // NOTE: Be sure to add your MySQL password here!
+// password: 'f079a062',
+// database: 'heroku_70d751653b4b5f9',
